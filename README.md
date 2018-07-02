@@ -35,3 +35,4 @@ HTML, CSS, Javascript and Jquery are the tools I used to create this Application
 
 **Support and contact details**
 In the event that a software developer is interested in contributing to the development of new features on the Application can reach me on cobs112@yahoo.com.
+You can also get to the gh-pages https://jacobokia.github.io/PingPong/ and be able to access the Application.
