@@ -1,53 +1,43 @@
 //business logic
-var pingPong = function(number){
+var counter = function(userInput){
+    var majorArray = [];
 
-  var str1 = "ping"
-  var str2 = "pong"
-  if (number % 3===0){
-    return str1;
+    for (var index = 1; index <= userInput; index++) {
 
-  }
-  else if (number % 5 ===0){
-    return str2;
-  }
+      console.log(index);
+      if (index % 15 ===0){
+        majorArray.push("Ping-Pong")
+      } else if (index % 5 ===0) {
+        majorArray.push("pong")
 
-  return false;
-}
+      } else if (index % 3 ===0) {
+        majorArray.push("ping")
+      } else {
+        majorArray.push(index);
+      };
+    }
+     return majorArray;
+};
 
 
-//code to try {
-//code that i am going to try {
-  /* for(var i = 1; i < 21; i++) {
-    switch(true) {
-
-        case( i % 5 === 0 && i % 3 === 0):
-            console.log("FizzBuzz");
-            break;
-
-        case(i % 5 === 0):
-            console.log("Buzz");
-            break;
-
-        case (i % 3 === 0):
-            console.log("Fizz");
-            break;
-        default:
-            console.log( i );*/
-    
 
 
 
 
 //UI logic
 $(document).ready(function(){
-    $("form#pingpong").submit(function(event){
+    $("#major").submit(function(event){
       event.preventDefault();
 
-      var userNumber = parseInt($("#userinput").val());
+      var userInput = parseInt($("#userInput").val());
+      $("#output").empty();
+      var finalOutput = counter(userInput);
 
-      var display = pingPong(userNumber);
 
 
-      $("#result").text(display);
-    })
+      finalOutput.forEach(function(output){
+      $("#output").append("<li>" + output + "</li>");
+    });
+    $("#userInput").val("");
+    });
 })
