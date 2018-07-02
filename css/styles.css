@@ -24,10 +24,16 @@ body {
 
 }
 .right {
+  color: brown;
   width: 80%;
   float: right;
   height: 100vh;
   margin-top: : 20px;
   padding:40px;
+  background-image:linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ), url(../images/pingpong5.jpeg);
+
 
 }
